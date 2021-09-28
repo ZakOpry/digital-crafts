@@ -1,0 +1,21 @@
+.cardContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .card{
+      display: flex;
+      flex-direction: column;
+    text-align: center;
+    background-color: rgb(245, 230, 29);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid rgb(235, 192, 53) 2px;
+  }
+
+  .card button{
+      background: none;
+  }
