@@ -1,0 +1,25 @@
+.DatabaseDiv{
+display: flex;
+
+flex-direction: column;
+width: 50vw;
+height: 75%;
+text-align: center;
+align-items: center;
+
+
+}
+
+.Names{
+    
+    margin-top: 80px;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 45%;
+    width: 50%;
+}
+
+.Names li{
+    list-style: none;
+    
+}

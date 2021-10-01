@@ -1,0 +1,15 @@
+.Maindiv{
+    display: flex;
+    flex-direction: column;
+    border-right: navy solid 2px;
+    
+    width: 50vw;
+    justify-content: flex-start;
+    align-items: center;
+    height: 75%;
+}
+
+input {
+    width: 50%;
+    margin: 8px;
+}
