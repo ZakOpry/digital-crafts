@@ -1,0 +1,21 @@
+.lowerPageMainDiv{
+    margin-top: 20px;
+    align-self: center;
+    /* background-color: royalblue; */
+    width: 935px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row: auto;
+    gap: 20px;
+}
+
+@media screen and (max-width: 1012px){
+    .lowerPageMainDiv{
+        align-self: center;
+        width: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+        grid-template-columns: 1fr;
+        
+    }
+}

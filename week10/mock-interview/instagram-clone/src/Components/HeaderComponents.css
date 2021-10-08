@@ -1,0 +1,28 @@
+.iconDiv{
+margin-left: 158px;
+width: 205px;
+height: 23px;
+display: flex;
+justify-content: space-between;
+
+}
+
+.headerIcons{
+    font-size: 23px;
+    color: rgb(38,38,38);
+    margin-right: 8px;
+    
+    
+}
+
+.headerProfilePic{
+    height: 100%;
+    border-radius: 50px;
+}
+
+@media screen and (max-width: 1070px){
+.iconDiv{
+    margin-left: auto;
+}
+
+}

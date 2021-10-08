@@ -1,0 +1,43 @@
+.footerDiv{
+margin-top: 20px;
+width: auto;    
+/* width: 935px; */
+height: auto;
+/* height: 125px; */
+/* background-color: red; */
+align-self: center;
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+
+align-items: center;
+
+}
+
+.firstDiv{
+    /* width: 700px; */
+    width: auto;
+    
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    height: auto;
+}
+.firstDiv p{
+    margin-left: 13px;
+    font-size: 15px;
+    color: rgb(153,153,153);
+}
+
+.secondDiv{
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+}
+
+.secondDiv p{
+    margin-left: 13px;
+    font-size: 15px;
+    color: rgb(153,153,153);
+
+}
