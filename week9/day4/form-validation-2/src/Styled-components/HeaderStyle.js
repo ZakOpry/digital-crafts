@@ -7,6 +7,7 @@ display: flex;
 background-color: grey;
 align-items: center;
 height: 100px;
+width: 100vw;
 
 
 `

@@ -6,10 +6,11 @@ import Home from "./Components/Home";
 import Dashboard from "./Components/Dashboard";
 import Garage from "./Components/Garage";
 import Account from "./Components/Account";
-import { FormDiv, MainContainer, SideandForm } from "./Styled-components/AppStyle";
+import { DashboardDiv, FormDiv, MainContainer, SideandForm } from "./Styled-components/AppStyle";
 import ErrorPage from "./Components/ErrorPage";
 import {BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom"
 import {useState} from "react"
+import "./App.css"
 
 
 
@@ -22,18 +23,24 @@ function App() {
      <Header viewSidebar={viewSidebar} setViewSidebar={setViewSidebar}/>
      <SideandForm>
       <Sidebar viewSidebar={viewSidebar}/>
-      <FormDiv>
+
       <Route path="/login">
+      <FormDiv>
       <Login />
-      </Route>
       </FormDiv>
-      </SideandForm>
+      </Route>
+     
+      
       <Route exact path="/">
       <Home/>
       </Route>
+      
+      
       <Route path="/dashboard">
       <Dashboard/>
       </Route>
+      
+      
       <Route path="/account">
         <Account/>
         </Route>
@@ -46,6 +53,7 @@ function App() {
         <Route path = "/errorpage" >
       <ErrorPage/>
       </Route>
+      </SideandForm>
     </MainContainer>
     </Switch>
     </Router>

@@ -4,11 +4,15 @@ import { MainSide, Name, SideBarLink, SideImg, UserButton, Welcome } from '../St
 import {Link} from "react-router-dom"
 import SidebarLinks from "./SidebarLinks";
 import { sidebardata } from "./SidebarLinksData";
+import { useDispatch, useSelector } from "react-redux";
 const URL = "https://randomuser.me/api/";
 export default function Sidebar(props) {
   const viewSidebar = props.viewSidebar;
-    const [user, setUser] = useState({});
+    // const [user, setUser] = useState({});
     const [counter, setCounter] = useState(0);
+    const dispatch = useDispatch()
+    const user = useSelector((state) => state.userData)
+    
     // useEffect is a hook
     // hook that fires when the component is mounted
     useEffect(() => {
@@ -22,10 +26,12 @@ export default function Sidebar(props) {
           },
         });
         const jsonNews = await getTheNews.json();
-        console.log(jsonNews);
-        setUser({
-          ...jsonNews.results[0],
-          userImage: jsonNews?.results[0]?.picture?.thumbnail,
+        
+        dispatch({
+          // ...jsonNews.results[0],
+          type: "GET_USER",
+          payload: {...jsonNews.results[0]}
+          // userImage: jsonNews?.results[0]?.picture?.thumbnail,
         });
       };
       getNewsData();
@@ -39,9 +45,9 @@ export default function Sidebar(props) {
       {viewSidebar ?  <MainSide>
             
             <Welcome>
-            <SideImg src={user?.picture?.large} alt="" />
+            <SideImg src={user?.userData.picture?.large} alt="alsd" />
             
-              <Name>Welcome {user?.name?.first} {""} {user?.name?.last}</Name>
+              <Name>Welcome {user?.userData.name?.first} {""} {user?.userData.name?.last}</Name>
              </Welcome>
             {/* <p>{user?.location?.city}</p> */}
             <UserButton onClick={() => setCounter(counter + 1)}>
